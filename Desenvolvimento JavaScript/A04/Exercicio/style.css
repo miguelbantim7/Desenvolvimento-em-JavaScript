@@ -1,0 +1,113 @@
+/*Estilo geral para o corpo do site*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: hsl(0, 0%, 94%);
+}
+
+/*CABEÇALHO*/
+/*Estilos gerais do cabeçalho*/
+.cabecalho-site {
+    display: flex;
+    /*permite que os elementos dentro de um container sejam organizados de forma fléxivel, permite ajustar o alinhamento e a distribuição de espaço*/
+    justify-content: space-between;
+    /*ajustar os itens nas extremidades*/
+    align-items: center;
+    /*alinha os itens no centro vertical*/
+    background-color: #333;
+    /*cor do plano de fundo*/
+    color: #fff;
+    /*cor da fonte*/
+    padding: 20px;
+    /*espaço interno entre o conteúdo do elemento*/
+}
+
+.botao{
+    background-color: #444444;
+    color: aliceblue;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0,3s, box-shadow 0.3s;
+}
+
+.botao:hover{
+    background-color: #111111;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px #333;
+}
+
+.cabecalho-site h1 {
+    margin: 0;
+}
+
+.cabecalho-site nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/*CONTEÚDO PRINCIPAL*/
+/*Estilos apicados com conteúdo principal no site*/
+.conteudo-principal {
+    display: flex;
+    flex-wrap: wrap;
+    /*permite que as seções quebrem linha*/
+    justify-content: center;
+    /*centralizar as seções*/
+    gap: 10px;
+    /*espaços externos entre as seções*/
+    padding: 10px;
+    /*espaços internos entre os elementos de uma seção*/
+}
+
+
+.caixa-conteudo {
+    box-shadow: 2px 2px 4px;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px gray;
+    flex: 1 1 300px;
+    /*1 -> seção cresce até ocupar todo o espaço disponível
+    1 - seção diminui para ocupar o espaço dísponiel
+    300px - determina o valor inicial, tamanho base da largura*/
+}
+
+.caixa-conteudo a{
+    text-decoration: none;/*tira a formatação de link do html*/
+    color: inherit;/*tira a cor vermelha de quando clicamos no link*/
+}
+
+.caixa-conteudo ul {
+    text-align: left;
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.rodape-site {
+    background-color: #333;
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    box-shadow: 0 4px 8px gray;
+}
+
+/*media query -> funciona como um "se, então" para a respotividade, de forma que: se o site tiver a dimensão X
+, então algum ajuste será aplicado no layout para garantir a consistência e visivilidade das informações*/
+
+@media screen and (max-width : 400px) {
+    .cabecalho-site{
+    flex-direction: column; /*em telas menores, o cabeçalho se ajusta*/
+    text-align: center;
+   }
+
+   .cabecalho-site nav{
+     margin-top: 10px;
+    }
+    
+}
