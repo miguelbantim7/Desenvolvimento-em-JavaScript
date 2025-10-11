@@ -24,7 +24,7 @@ function validarEmail(){
         mensagemErro.textContent= "Digite seu e-mail para continuar."
     }
 
-    
+
 
 
 
