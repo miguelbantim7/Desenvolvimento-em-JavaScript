@@ -13,13 +13,13 @@
            <form id="cadastroForm">
               <div class="input-group">
                     <label for="email">E-mail:</label>
-                      <input type="email" id="email" nome="email" required oninput="validarEmail()">
+                      <input type="email" id="email" nome="email" required oninput="validarCadastro()">
                         <p id="mensagemErro" class="mensagem-status"></p>
-                        <label for="senha">Senha:</label>
-                        <input type="password" id="senha" name="senha" required>
+                        <label for="password">Senha:</label>
+                        <input type="password" id="password" name="password" required oninput="validarCadastro()">
+                        <label for="password"><br>Confirmar Senha:</label>
+                        <input type="password" id="confirmarSenha" name="confirmarSenha" required oninput="validarCadastro()">
                         <p id="mensagemErroSenha" class="mensagem-status"></p>
-                        <label for="senha">Confirmar Senha:</label>
-                        <input type="password" id="confirmarSenha" name="confirmarSenha" required>
                </div>
               <button type="submit" id="btnEnviar" disabled> Enviar Cadastro </button>
            </form>
@@ -27,9 +27,9 @@
 
     <script src="script.js"> </script>
 
+
 </body>
 </html>
 
 
-<!--d-->
 

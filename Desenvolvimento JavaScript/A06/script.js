@@ -1,4 +1,4 @@
-function validarEmail() {
+function validarCadastro() {
 
     //Passo 1: capturar os elementos do DOM (tela)
     const emailInput = document.getElementById('email');
@@ -36,15 +36,15 @@ function validarEmail() {
 function validarFormulario(event) {
     event.preventDefault();
 
-    const senha = document.getElementById('senha').value;
+    const password = document.getElementById('password').value;
     const confirmarSenha = document.getElementById('confirmarSenha').value;
 
-    if (senha.length < 6) {
+    if (password.length < 6) {
         alert("A senha deve ter pelo menos 6 caracteres.");
         return false;
     }
 
-    if (senha !== confirmarSenha) {
+    if (password !== confirmarSenha) {
         alert("As senhas não coincidem.");
         return false;
     }
@@ -59,13 +59,12 @@ function validarFormulario(event) {
 const formulario = document.getElementById('cadastroForm');
 formulario.addEventListener('submit', function(event) {
     // Validação do email
-    validarEmail();
+    validarCadastro();
 
     // Se o email for válido, validamos o formulário
     if (!document.getElementById('btnEnviar').disabled) {
         // Validar senhas
         if (validarFormulario(event)) {
-            // O cadastro foi feito com sucesso
             console.log("Cadastro enviado com sucesso.");
         }
     }
