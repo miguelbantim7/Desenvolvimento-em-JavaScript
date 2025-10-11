@@ -1,0 +1,97 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(231, 231, 231);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    min-height: 100vh;
+    /*garantir que o corpo da página tenha uma altura de 100% da janela de visualização*/
+}
+
+.container{
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px gray;
+    width: 350px;
+}
+
+h1{
+    text-align: center;
+    color: #333;
+
+}
+
+.input-group{
+    margin-bottom: 20px;
+}
+
+label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="email"]{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /*garante que o padding não aumente a largura total*/
+}
+
+button{
+    width: 100%;
+    padding: 10px;
+    background-color: #ccc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+button:hover:enabled{
+    background-color: #0056b3;
+}
+
+/*estilo de validação (interação com a tela)*/
+.mensagem-status{
+    margin-top: 5px;
+    font-size: xx-small;
+    height: 1.2em;
+}
+
+.erro{
+    color: red;
+    font-weight: bold;
+}
+
+.sucesso{
+    color: green;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
