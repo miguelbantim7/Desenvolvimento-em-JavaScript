@@ -22,10 +22,24 @@ function validarEmail(){
     if(email == ""){
         //campo vazio: não é um erro, mas também não é valido pra continuar
         mensagemErro.textContent= "Digite seu e-mail para continuar."
+        //limpar as classes de sucesso/erro
+        mensagemErro.className="mensagem-status"
+        isValido = false 
+    } else if (emailRegex.test(email)){
+        //email válido 
+        mensagemErro.textContent = "Email válido!"
+        mensagemErro.className= 'mensagem-status sucesso'
+        isValido= true;
+    } else if (!emailRegex.test(email)) {
+        // email inválido
+        mensagemErro.textContent = "Erro: Email inválido!";
+        mensagemErro.className = 'mensagem-status erro';
+        isValido= false;
     }
 
-
-
+    //interação com a tela: habilitar ou desabilitar o botão Enviar
+    btnEnviar.disabled = !isValido;
+    
 
 
 
